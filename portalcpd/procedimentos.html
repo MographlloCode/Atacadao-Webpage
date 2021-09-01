@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/imgs/logo_covid.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portal Atacadão - 046</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body onload="showSlides();" class="app">
+	<header class="menu-container">
+		<nav id="menu" class="nav-menu">
+			<ul class="main-nav">
+				<li><a class="avoid-hover-logo" href="#"><img class="logo" src="../assets/imgs/logos/logo_covid_horizontal.png" alt="Logo do Atacadão com uma máscara facial remetendo à proteção ao covid-19"></a></li>
+				<li><a href="index.html">Portal</a></li>
+				<li><a href="#cups">CUPS</a></li>
+				<li><a href="#nfe">NFe</a></li>
+				<li><a href="#caixa-empresa">Caixa Empresa</a></li>
+				<li><a href="#relacao-pdv">PDV</a></li>
+				<li><a href="#senhas">Senhas</a></li>
+				<li><a href="#telefones">Telefones</a></li>
+			</ul>
+		</nav>		
+	</header>
+	<main class="main-container">
+		<div id="ramais" class="space"></div>
+		<h2 id="cups" class="title title-space">Comandos da Fila de Impressão (CUPS)</h2>
+		<div class="printer-container">
+			<div class="printer-list">
+				<table class="printer-table">
+					<thead class="printer-th-proc">
+						<tr>
+							<th>Comando</th>
+							<th>Execução</th>
+						</tr>
+					</thead>
+					<tbody class="printer-tb">
+						<tr>
+							<td>Listar Fila de Impressão</td>
+							<td>lpstat -t</td>
+						</tr>
+						<tr>
+							<td>Habilitando fila de impressão</td>
+							<td>sudo lpadmin -plpt7 -E</td>
+						</tr>
+						<tr>
+							<td>Listando fila de impressão de <br>uma impressora específica</td>
+							<td>lpstat -plpt7</td>
+						</tr>
+						<tr>
+							<td>Apagar todos o Jobs de uma fila</td>
+							<td>sudo cancel -a lpt7</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="space"></div>
+		<h2 id="nfe" class="title title-space">Principais Status de NFe</h2>
+		<div class="printer-container">
+			<div class="printer-list">
+				<table class="printer-table">
+					<thead class="printer-th">
+						<tr>
+							<th>Status</th>
+							<th>Descrição</th>
+							<th>Definição do Status e Conduta</th>
+						</tr>
+					</thead>
+					<tbody class="printer-tb">
+						<tr>
+							<td>100</td>
+							<td>Autorizado o Uso da NF-e</td>
+							<td>Resultado de processamento da solicitação devolvida pelo<br> SEFAZ: NFe validada autorizada com sucesso, ícone deve<br>estar em verde com processo 6 no Portal Nfe.</td>
+						</tr>
+						<tr>
+							<td>232</td>
+							<td>Rejeição: IE do destinatário não informada</td>
+							<td>Verificar no cadastro do destinatário, se cliente SCDOU28<br> AS ou SCDOU16 AT, se fornecedor sistema de cadastro<br> de fornecedor, após correção nfe deve ser reemitida<br> no sistema gerador.</td>
+						</tr>
+						<tr>
+							<td>Tabela</td>
+							<td>Acesso aos outros códigos possíveis</td>
+							<td><a href="https://drive.google.com/file/d/194S4oc8uom3EZtDramqerL-4fMDl2HGM/view?usp=sharing" target="_blank">Outros erros</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="space"></div>
+		<h2 id="caixa-empresa" class="title title-space">Caixa Empresa</h2>
+		<div class="printer-container">
+					<div class="printer-list">
+						<table class="printer-table">
+							<thead class="printer-th">
+								<tr>
+									<th>Caixa</th>
+									<th>IP</th>
+									<th>HOSTNAME</th>
+								</tr>
+
+							</thead>
+							<tbody class="printer-tb">
+								<tr>
+									<td>12B</td>
+									<td>172.20.33.233</td>
+									<td>PDVEMPRESA3</td>
+								</tr>
+								<tr>
+									<td>13A</td>
+									<td>172.20.33.232</td>
+									<td>PDVEMPRESA2</td>
+								</tr>
+								<tr>
+									<td>13B</td>
+									<td>172.20.33.231</td>
+									<td>PDVEMPRESA1</td>
+								</tr>
+							</tbody>
+							<thead class="border-top printer-th">
+								<tr>
+									<th></th>
+									<th>Acesso Remoto (Terminais Touch):</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody class="printer-tb">
+								<tr>
+									<td></td>
+									<td>ssh root@"ip" | Senha: toshiba</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+		</div>
+		<div class="space"></div>
+		<h2 id="relacao-pdv" class="title title-space">Relação de PDV</h2>
+		<div class="printer-container">
+					<div class="printer-list">
+						<table class="printer-table">
+							<thead class="printer-th">
+								<tr>
+									<th>Caixa</th>
+									<th>PDV</th>
+									<th>SAT</th>
+								</tr>
+							</thead>
+							<tbody class="printer-tb">
+								<tr>
+									<td>Cafeteria</td>
+									<td>01</td>
+									<td>794504</td>
+								</tr>
+								<tr>
+									<td>1 A</td>
+									<td>24</td>
+									<td>794408</td>
+								</tr>
+								<tr>
+									<td>1 B</td>
+									<td>23</td>
+									<td>773303</td>
+								</tr>
+								<tr>
+									<td>2 A</td>
+									<td>22</td>
+									<td>773100</td>
+								</tr>
+								<tr>
+									<td>2 B</td>
+									<td>21</td>
+									<td>734973</td>
+								</tr>
+								<tr>
+									<td>3 A</td>
+									<td>20</td>
+									<td>889584</td>
+								</tr>
+								<tr>
+									<td>3 B</td>
+									<td>19</td>
+									<td>734870</td>
+								</tr>
+								<tr>
+									<td>4 A</td>
+									<td>18</td>
+									<td>773316</td>
+								</tr>
+								<tr>
+									<td>4 B</td>
+									<td>17</td>
+									<td>734863</td>
+								</tr>
+								<tr>
+									<td>5 A</td>
+									<td>16</td>
+									<td>794508</td>
+								</tr>
+								<tr>
+									<td>5 B</td>
+									<td>15</td>
+									<td>969547</td>
+								</tr>
+								<tr>
+									<td>6 A</td>
+									<td>14</td>
+									<td>794520</td>
+								</tr>
+								<tr>
+									<td>6 B</td>
+									<td>13</td>
+									<td>734877</td>
+								</tr>
+								<tr>
+									<td>7 A</td>
+									<td>12</td>
+									<td>10322952</td>
+								</tr>
+								<tr>
+									<td>7 B</td>
+									<td>11</td>
+									<td>734900</td>
+								</tr><tr>
+									<td>8 A</td>
+									<td>10</td>
+									<td>894539</td>
+								</tr>
+								<tr>
+									<td>8 B</td>
+									<td>09</td>
+									<td>734872</td>
+								</tr>
+								<tr>
+									<td>9 A</td>
+									<td>08</td>
+									<td>734867</td>
+								</tr>
+								<tr>
+									<td>9 B</td>
+									<td>07</td>
+									<td>969405</td>
+								</tr>
+								<tr>
+									<td>10 A</td>
+									<td>06</td>
+									<td>794509</td>
+								</tr>
+								<tr>
+									<td>10 B</td>
+									<td>05</td>
+									<td>773237</td>
+								</tr>
+								<tr>
+									<td>11 A</td>
+									<td>04</td>
+									<td>965802</td>
+								</tr>
+								<tr>
+									<td>11 B</td>
+									<td>03</td>
+									<td>166294</td>
+								</tr>
+								<tr>
+									<td>12 A</td>
+									<td>02</td>
+									<td>969499</td>
+								</tr>
+								<tr>
+									<td>12 B</td>
+									<td>233</td>
+									<td>Empresa</td>
+								</tr>
+								<tr>
+									<td>13 A</td>
+									<td>232</td>
+									<td>Empresa</td>
+								</tr>
+								<tr>
+									<td>13 B</td>
+									<td>233</td>
+									<td>Empresa</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+		</div>
+			<div class="space"></div>
+		<h2 id="senhas" class="title title-space">Senhas</h2>
+		<div class="printer-container">
+					<div class="printer-list">
+						<table class="printer-table">
+							<thead class="printer-th">
+								<tr>
+									<th>Página/Servidor</th>
+									<th>Login</th>
+									<th>Senha</th>
+								</tr>
+							</thead>
+							<tbody class="printer-tb">
+								<tr>
+									<td>Triangulus</td>
+									<td>cpd046</td>
+									<td>cpd2021</td>
+								</tr>
+								<tr>
+									<td>Gmail</td>
+									<td>cpdsantos@atacadao.com.br</td>
+									<td>Atacadao@2018*</td>
+								</tr>
+								<tr>
+									<td>Conferentes (ADMIN)</td>
+									<td>cpd46</td>
+									<td>cpd46</td>
+								</tr>
+								<tr>
+									<td>Portal Worknotes</td>
+									<td>cpdsantos</td>
+									<td>lotusnotes</td>
+								</tr>
+								<tr>
+									<td>Tecnoset (Impressoras Lexmark)</td>
+									<td>cpdsantos@atacadao.com.br</td>
+									<td>Atacadao@2018</td>
+								</tr>
+								<tr>
+									<td>Tanca (Sat's)</td>
+									<td>cpdsantos@atacadao.com.br</td>
+									<td>Atacadao@2018</td>
+								</tr>
+								<tr>
+									<td>Elgin (Sat's)</td>
+									<td>cpdsantos@atacadao.com.br</td>
+									<td>Atacadao@2018</td>
+								</tr>
+								<tr>
+									<td>Servidor Robô</td>
+									<td>admin</td>
+									<td>secure</td>
+								</tr>
+								<tr>
+									<td>Toshiba</td>
+									<td>atacadao</td>
+									<td>atacadao@2020</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					</div>
+		</div>
+		<div class="space"></div>
+		<h2 id="telefones" class="title title-space">Telefones Úteis</h2>
+		<div class="printer-container">
+					<div class="printer-list">
+						<table class="printer-table">
+							<thead class="printer-th">
+								<tr>
+									<th>Empresa</th>
+									<th>Número</th>
+									<th>Observação</th>
+								</tr>
+							</thead>
+							<tbody class="printer-tb">
+								<tr>
+									<td>Cielo Suporte Empresas</td>
+									<td>4002-9111</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Takayasu Balanças</td>
+									<td>(013) 3323-1031<br>(013) 3028-4315<br>(013) 99115-4088</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Toshiba Impressora</td>
+									<td>0800-892-3448</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Digicon Desbloqueio</td>
+									<td>(019) 3801-9413</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Otka</td>
+									<td>(011) 3386-0100</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Grupo Adros CFTV</td>
+									<td>(011) 2093-1256</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>TN Balanças</td>
+									<td>(013) 3273-3444</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Link Telefônica MPLS</td>
+									<td>0800-0151551<br>ID:1057714<br>LP:115923203050098</td>
+									<td>Opção = 2<br>Código de acesso<br>(75315333/4015)</td>
+								</tr>
+								<tr>
+									<td>Interone/Google</td>
+									<td>0800-0151551<br>ID:1222614<br>LP:115923203012196</td>
+									<td>Opção = 2<br>Código de acesso<br>(75315333/4015)</td>
+								</tr>
+								<tr>
+									<td>Link Backup (BT)</td>
+									<td>011-4700-8862<br>0800-0474-367</td>
+									<td>Opção = 2</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+		</div>
+		<div class="space"></div>
+	</main>
+	<footer>
+		<div class="footer-container">
+			<div id="logo-footer">
+				<a href="index.html"><img class="logo-footer" src="../assets/imgs/logos/logo_covid_dois.png" alt="Logo do Atacadão com uma máscara facial remetendo à proteção ao covid-19"></a>
+			</div>
+			<div class="footer-links">
+				<ul>
+					<li><a href="https://www.boavistaservicos.com.br/" target="_blank">Boa Vista</a></li>
+					<li><a href="https://gerenciamento.bvsnet.com.br/PortfolioManagementWeb/login.jsp" target="_blank">Equifax</a></li>
+					<li><a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp" target="_blank">Consulta CNPJ</a></li>
+					<li><a href="https://portal.fazenda.sp.gov.br/Paginas/default.aspx" target="_blank">Sefaz</a></li>
+				</ul>
+			</div>
+			<div class="line-divider"></div>
+			<div class="footer-links">
+				<ul>
+					<li><a href="http://www.sintegra.gov.br/" target="_blank">Sintegra</a></li>
+					<li><a href="http://www8.receita.fazenda.gov.br/SimplesNacional/aplicacoes.aspx?id=21" target="_blank">Simples Nacional</a></li>
+					<li><a href="https://nfe.fazenda.sp.gov.br/ConsultaNFe/consulta/publica/ConsultarNFe.aspx" target="_blank">Consulta NFe</a></li>
+					<li><a href="https://www.danfeonline.com.br/" target="_blank">Danfe Online</a></li>
+				</ul>
+			</div>
+			<div class="line-divider"></div>
+			<div class="footer-links">
+				<ul>
+					<li><a href="https://www.fsist.com.br/" target="_blank">Fsist</a></li>
+					<li><a href="http://www.nfe.fazenda.gov.br/portal/principal.aspx" target="_blank">Portal NFe</a></li>
+					<li><a href="https://satsp.fazenda.sp.gov.br/COMSAT/Public/ConsultaPublica/ConsultaPublicaCfe.aspx" target="_blank">Consulta Cupom</a></li>
+					<li><a href="http://tancasuporte.mysuite2.com.br/client/index.php" target="_blank">SAC Tanca</a></li>
+				</ul>
+			</div>
+			<div class="line-divider"></div>
+			<div class="footer-links">
+				<ul>
+					<li><a href="https://www.automacao.elgin.com.br/troca/index.php?rota=troca%2Fbusca&protocolo=&numero_serie=&cpf=&cnpj=75.315.333%2F0046-00#" target="_blank">SAC Elgin</a></li>
+					<li><a href="https://grupotecnoset.custhelp.com/app/home" target="_blank">Tecnoset</a></li>
+					<li><a href="http://manager.selbetti.com.br/canal_cliente/" target="_blank">Toshiba</a></li>
+					<li><a href="https://www.telegrama.com.br/servlet/TMSLPrincipal" target="_blank">Telegrama</a></li>
+				</ul>
+			</div>
+			<!-- Barra de Pesquisa
+			<div class="search-box">
+				<form id="searchbox" class="search-box-form" action="">
+					<input id="search" class="search-box-input" type="text">
+					<i id="submit" class="fa fa-search"></i>
+				</form>
+				<div class="credits">
+					<h3>Atacadão - Santos</h3>
+				</div>
+			</div>
+			-->
+		</div>			
+	</footer>
+</body>
+</html>
